@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Cairo } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
+import { ThemeProvider } from '@/context/ThemeCotext'
+
+/**
+ *  Root layout component
+ *  Created by Muhammed Elşami on 01.12.2023
+ */ 
 
 const inter = Inter({ subsets: ['latin'] })
+const cairo = Cairo({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +25,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cairo.className}>
+        <ThemeProvider>
+          <div className='container'>
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

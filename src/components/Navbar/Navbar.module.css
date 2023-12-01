@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 2rem;
+    color:  rgb(0 191 166);
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbarLink {
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.navbarLink:hover {
+    color:  rgb(0 191 166);
+}
