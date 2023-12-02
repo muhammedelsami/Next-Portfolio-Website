@@ -14,9 +14,8 @@ export default function Footer() {
             <div>&copy;2023 <span className={styles.name}>Muhammed Elsami</span>. All rights reserved.</div>
             <div className={styles.social}>
                 {social_media.map((social, index) => (
-                    <Link href={social.url}>
+                    <Link href={social.url} key={index}>
                         <Image 
-                            key={index}
                             src={`/images/icons/${social.name}.png`}
                             alt={social.name}
                             width={25} 
