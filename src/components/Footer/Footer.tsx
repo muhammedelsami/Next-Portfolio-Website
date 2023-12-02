@@ -1,6 +1,7 @@
 import styles from './Footer.module.css'
 import Image from 'next/image'
 import social_media from './data';
+import Link from 'next/link';
 
 /**
  *  Footer component
@@ -13,14 +14,16 @@ export default function Footer() {
             <div>&copy;2023 <span className={styles.name}>Muhammed Elsami</span>. All rights reserved.</div>
             <div className={styles.social}>
                 {social_media.map((social, index) => (
-                    <Image 
-                        key={index}
-                        src={`/images/icons/${social.name}.png`}
-                        alt={social.name}
-                        width={25} 
-                        height={25} 
-                        className={styles.socialIcon}
-                    />
+                    <Link href={social.url}>
+                        <Image 
+                            key={index}
+                            src={`/images/icons/${social.name}.png`}
+                            alt={social.name}
+                            width={25} 
+                            height={25} 
+                            className={styles.socialIcon}
+                        />
+                    </Link>
                 ))}
                 
             </div>

@@ -1,0 +1,64 @@
+.container {
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.coverImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.postTitle {
+    margin: 20px 0;
+}
+
+.date, .author {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.content {
+    margin-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.readMore {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.readMore:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+@media screen and (max-width: 768px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+    
+}

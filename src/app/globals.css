@@ -5,6 +5,8 @@
   --tertiary: #00f;
   --primary-hover : rgb(255, 221, 0);
 
+  --text-stroke-color: rgba(255,255,255,0.6);
+
   --size-border-radius: 5px;
 }
 
@@ -46,11 +48,13 @@ a {
 .dark {
   background-color: #111;
   color: #bbb;
+
 }
 
 .light {
   background-color: white;
   color: #111;
+  --text-stroke-color: rgba(0, 0, 0, 0.875);
 }
 
 .theme {

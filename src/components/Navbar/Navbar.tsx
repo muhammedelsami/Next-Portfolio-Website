@@ -19,7 +19,12 @@ export default function Navbar() {
 
     return (
         <div className={styles.container}>
-            <Link href="/" className={styles.logo}>Muhammed Elşami</Link>
+            {/* <Link href="/" className={styles.logo}>Muhammed Elşami</Link> */}
+
+            <Link href={'/blog'} className={styles.button} data-text="Awesome">
+                <span className={styles.actualtext}>&nbsp;Muhammed Elşami&nbsp;</span>
+                <span aria-hidden="true" className={styles.hovertext}>&nbsp;Muhammed&nbsp;Elşami&nbsp;</span>
+            </Link>
 
             <div className={styles.menuIcon} onClick={toggleMenu}>
                 ☰

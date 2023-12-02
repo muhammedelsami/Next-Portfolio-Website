@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import AboutPage from './repositories/page'
 import ContactPage from './contact/page'
 import Hero from '/public/images/undraw_android.svg'
+import Link from 'next/link'
 
 /**
  *  Home page component
@@ -16,7 +17,7 @@ export default function Home() {
           <div className={styles.col}>
             <h1 className={styles.title}>I’m Muhammed Android Developer</h1>
             <p className={styles.description}>I graduated from Sivas Cumhuriyet University Computer Engineering Department.</p>
-            <button className={styles.button}>Contact Me</button>
+            <Link href={'/contact'} className={styles.button}>Contact Me</Link>
           </div>
 
           <div className={styles.col}>

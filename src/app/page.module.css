@@ -27,7 +27,7 @@
 }
 
 .button {
-  padding: 20px;
+  padding: 10px 60px;
   border-radius: var(--size-border-radius);
   background-color: var(--primary);
   border: none;
@@ -46,5 +46,55 @@
   height: 500px;
   object-fit: contain;
 }
+
+
+.btn1 {
+  --glow-color: rgb(176 255 199);
+  --glow-spread-color: rgb(123 255 200 / 78%);
+  --enhanced-glow-color: rgb(206 255 239);
+  --btn-color: rgb(61 133 136);
+  border: .25em solid rgb(176 255 189);
+  padding: 1em 3em;
+  color: rgb(176 255 198);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .btn1::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .btn1:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .btn1:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
 
 

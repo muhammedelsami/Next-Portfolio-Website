@@ -1,26 +1,34 @@
 import React from 'react';
-
-/**
- *  BlogPage component
- *  Created by Muhammed Elşami on 01.12.2023
- */ 
+import styles from './BlogPage.module.css';
+import Link from 'next/link';
 
 const BlogPage = () => {
     const posts = [
-        { id: 1, title: 'Blog Post 1', content: 'This is the content for blog post 1.' },
-        { id: 2, title: 'Blog Post 2', content: 'This is the content for blog post 2.' },
+        { id: 1, title: 'RGB Remote Control', content: 'RGB Led Controller; Control the Rgb led by phone and it is very easy to turn ON/OFF and change colors.', coverImage: 'https://www.pushman.muhammedelsami.com/imgs/remotecontrol.png', date: '2023-12-01', author: 'Muhammed Elşami' },
+        { id: 2, title: 'Android Animated Login Form', content: 'Animated Login Form animated login screen using rive library.', coverImage: 'https://www.pushman.muhammedelsami.com/imgs/animationlogin.webp', date: '2022-11-02', author: 'Muhammed Elşami' },
+        { id: 2, title: 'PomoDroid Android Application', content: 'PomoDroid is a productivity app inspired by the Pomodoro Technique. It helps you organize your tasks and manage your time effectively. With PomoDroid, you can set work intervals, short breaks, and long breaks, and the app will notify you when it is time to start working or take a break. It also provides statistics to help you track your productivity over time.', coverImage: 'https://www.pushman.muhammedelsami.com/imgs/pomodroid.webp', date: '2023-12-02', author: 'Muhammed Elşami' },
+        { id: 2, title: 'Push Man Notification Application', content: 'You can send notifications to your own apps through this app, you only need firebase server key. If you want to send it to a specific user, you will need the users token.', coverImage: 'https://www.pushman.muhammedelsami.com/imgs/pushman.webp', date: '2022-10-02', author: 'Muhammed Elşami' },
+
         // Add more posts as needed
     ];
 
     return (
-        <div>
-            <h1>Blog</h1>
-            {posts.map(post => (
-                <div key={post.id}>
-                    <h2>{post.title}</h2>
-                    <p>{post.content}</p>
-                </div>
-            ))}
+        <div className={styles.container}>
+            <h1 className={styles.title}>Blog</h1>
+            <div className={styles.posts}>
+                {posts.map(post => (
+                    <Link href={'/blog'} key={post.id} className={styles.post}>
+                        <img src={post.coverImage} alt={post.title} className={styles.coverImage} />
+                        <h2 className={styles.postTitle}>{post.title}</h2>
+                        <p className={styles.date}>{post.date}</p>
+                        <p className={styles.author}>{post.author}</p>
+                        <p className={styles.content}>{post.content}</p>
+                        <div className={styles.readMore}>
+                            Read More
+                        </div>
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 }
