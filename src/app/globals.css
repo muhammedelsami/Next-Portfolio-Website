@@ -3,6 +3,7 @@
   --primary: rgb(0 191 166);;
   --secondary: #bbb;
   --tertiary: #00f;
+  --primary-hover : rgb(255, 221, 0);
 
   --size-border-radius: 5px;
 }

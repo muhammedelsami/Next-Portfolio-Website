@@ -21,3 +21,15 @@
 .socialIcon:hover {
     opacity: 1;
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .social {
+        flex-direction: row;
+    }
+    
+}

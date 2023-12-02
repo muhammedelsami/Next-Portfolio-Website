@@ -18,7 +18,7 @@ export default function DarkModeToggle() {
             <div className={stayls.icon}>🌚</div>
             <div 
                 className={stayls.switcher}
-                style={mode === "light" ? {left: "2px"} : {right :"2px"}}
+                style={mode === "light" ? {left: "4px"} : {right :"4px"}}
             />
         </div>
     )
