@@ -10,7 +10,7 @@ import social_media from './data';
 export default function Footer() {
     return (
         <div className={styles.container}>
-            <div>&copy;2023 Muhammed Elsami. All rights reserved.</div>
+            <div>&copy;2023 <span className={styles.name}>Muhammed Elsami</span>. All rights reserved.</div>
             <div className={styles.social}>
                 {social_media.map((social, index) => (
                     <Image 

@@ -12,6 +12,7 @@
 .icon {
     font-size: 18px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .switcher {
@@ -21,4 +22,8 @@
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
+}
+
+.switcher:hover {
+    background-color: var(--primary-hover);
 }

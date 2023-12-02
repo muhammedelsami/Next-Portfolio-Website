@@ -14,9 +14,9 @@ export default function Home() {
         <div className={styles.container}>
 
           <div className={styles.col}>
-            <h1 className={styles.title}>Muhammed Elsami</h1>
-            <p className={styles.description}>Hi, My name id Muhammed Elsami, Im a computer Engineer and i work as an android developer</p>
-            <button className={styles.button}>My Github</button>
+            <h1 className={styles.title}>I’m Muhammed Android Developer</h1>
+            <p className={styles.description}>I graduated from Sivas Cumhuriyet University Computer Engineering Department.</p>
+            <button className={styles.button}>Contact Me</button>
           </div>
 
           <div className={styles.col}>

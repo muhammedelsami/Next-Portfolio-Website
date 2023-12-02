@@ -1,7 +1,9 @@
+"use client";
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import links from './data';
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
+import { useState } from 'react';
 
 /**
  *  Navbar component
@@ -9,17 +11,42 @@ import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
  */ 
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <div className={styles.container}>
             <Link href="/" className={styles.logo}>Muhammed Elşami</Link>
 
-            <div className={styles.links}>
+            <div className={styles.menuIcon} onClick={toggleMenu}>
+                ☰
+            </div>
+
+            <div className={`${styles.links} ${isOpen ? styles.open : ''}`}>
                 <DarkModeToggle />
 
                 {links.map((link, index) => (
-                    <Link key={index} href={link.url} className={styles.navbarLink}>{link.title}</Link>
+                     <Link key={index} href={link.url} className={styles.navbarLink}>{link.title}</Link>
                 ))}
             </div>
         </div>
     );
+
+
+    // return (
+    //     <div className={styles.container}>
+    //         <Link href="/" className={styles.logo}>Muhammed Elşami</Link>
+
+    //         <div className={styles.links}>
+    //             <DarkModeToggle />
+
+    //             {links.map((link, index) => (
+    //                 <Link key={index} href={link.url} className={styles.navbarLink}>{link.title}</Link>
+    //             ))}
+    //         </div>
+    //     </div>
+    // );
 }

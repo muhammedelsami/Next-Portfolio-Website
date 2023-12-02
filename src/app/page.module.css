@@ -12,7 +12,7 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 1.2;
@@ -34,8 +34,11 @@
   width: max-content;
   color: #fff;
   font-weight: bold;
-  text-transform: uppercase;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
 }
 
 .img {
